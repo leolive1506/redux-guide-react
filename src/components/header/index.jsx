@@ -7,6 +7,7 @@ import Cart from "../cart/index";
 import * as Styles from "./styles";
 import { UserActionTypes } from "../../redux/user/action-types";
 import { loginUser, logoutUser } from "../../redux/user/actions";
+import { selectProductsCount } from "../../redux/cart/cart.selectors";
 
 function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
@@ -14,11 +15,10 @@ function Header() {
   const { products } = useSelector(rootReducer => rootReducer.cartReducer);
   const dispatch = useDispatch();
 
+  const productsCount = useSelector(selectProductsCount)
   const handleCartClick = () => {
     setCartIsVisible(true);
   };
-
-  console.log(currentUser)
 
   const handleLoginClick = () => {
     dispatch(loginUser({
@@ -26,10 +26,6 @@ function Header() {
       email: "leonardolivelopes2@gmail.com"
     }))
   }
-
-  const productsCount = useMemo(() => {
-    return products.reduce((acc, curr) => acc + curr.quantity, 0)
-  }, [products])
 
   const handleLogoutClick = () => {
     dispatch(logoutUser())

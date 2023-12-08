@@ -16,6 +16,11 @@
     - Ao dispachar uma action, EntityReducer fica monitorando certos types de actions
   - padrão nomenclatura action
     - entity/action (Ex: users/login)
+## Selectors
+- calcular deriving data
+  - dado variado de outro dado
+    - Ex: preço total dos produtos, quantidade de produtos
+
 # Log redux
 ```sh
 npm i redux-logger
