@@ -26,3 +26,8 @@
 npm i redux-logger
 ```
 # [Diferença Context x Redux](https://levelup.gitconnected.com/react-context-api-vs-redux-99d46b8ff2eb)
+
+# Redux toolkit
+```sh
+npm i @reduxjs/toolkit
+```
