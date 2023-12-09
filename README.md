@@ -1,3 +1,7 @@
+# Avisos gerais
+- implementado inicialmente redux somente com core (sem redux toolkit) na branch starter
+- para ver a diferença de implementações basta comparar as duas versões
+
 # [Redux](https://redux.js.org/style-guide)
 - state container
 - centralizar state
