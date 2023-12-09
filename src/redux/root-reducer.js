@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import userReducer from './user/reducer'
-import { cartReducer } from './cart/reducer'
+import cartReducer from './cart/slice'
 
 // combineReducers pega todos redux e guarda no root
 const rootReducer = combineReducers({ userReducer, cartReducer })
