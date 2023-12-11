@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
+import { selectProductsCount } from "../../redux/cart/cart.selectors";
+import { login, logout } from "../../redux/user/slice";
 // Components
 import Cart from "../cart/index";
 
 // Styles
 import * as Styles from "./styles";
-import { loginUser, logoutUser } from "../../redux/user/actions";
-import { selectProductsCount } from "../../redux/cart/cart.selectors";
 
 function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
@@ -20,14 +20,14 @@ function Header() {
   };
 
   const handleLoginClick = () => {
-    dispatch(loginUser({
+    dispatch(login({
       name: "Leonardo",
       email: "leonardolivelopes2@gmail.com"
     }))
   }
 
   const handleLogoutClick = () => {
-    dispatch(logoutUser())
+    dispatch(logout())
   }
 
   return (

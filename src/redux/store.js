@@ -6,8 +6,7 @@ import rootReducer from './root-reducer'
 
 const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().prepend(logger),
-
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().prepend(logger)
 })
 
 export default store;
